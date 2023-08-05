@@ -619,3 +619,58 @@ body, html{
     width: 100%;
   }
 }
+
+/*Games Page*/
+
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+.slider-container {
+  height: 500px; 
+  width: 800px;
+  display: flex;
+  overflow: auto;
+  scroll-snap-type: x mandatory; 
+}
+.slider-container .slide {
+  scroll-snap-align: start;
+  height: 337.5px;
+  width: 600px;
+  cursor: pointer;
+
+
+}
+
+.slider-container .slide h2 {
+  position: relative;
+  top: 350px;
+  left: 30px;
+  color: #141414;
+}
+
+.slider-container .slide:nth-child(1) {
+  margin: 1rem;
+  height: 337.5px;
+  width: 600px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%),url('/images/JumpRope.gif');
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+
+.slider-container .slide:nth-child(2) {
+  margin: 1rem;
+  height: 337.5px;
+  width: 600px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%),url('/images/Survivor.gif');
+  background-size: cover;
+  position: relative;
+
+}
+
