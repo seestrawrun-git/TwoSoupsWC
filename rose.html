@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Titanic: Rose Catcher</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NavBar-->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="/" id="navbar__logo"><i class="fas fa-spoon"></i>Soups</a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="/" class="navbar__links">
+  
+            Home
+          </a>
+        </li>
+        <li class="navbar__item">
+          <a href="/games.html" class="navbar__links">
+  
+            Games
+          </a>
+        </li>
+        <li class="navbar__item">
+          <a href="/art.html" class="navbar__links">
+  
+            Art
+          </a>
+        </li>
+        <li class="navbar__items">
+          <a href="about.html" class="navbar__links">
+  
+            About
+          </a>
+        </li>
+        <li class="navbar__btn">
+          <a href="/email.html" class="button">
+  
+            Contact Me
+          </a>
+        </li>
+      </ul>
+    </div>
+   </nav>
+  
+
+ <!-- main Section-->
+ <div class="main">
+  <div class="main__container">
+    <div class="main__content">
+      <h1>Unreal Engine</h1>
+      <h2>Engineering</h2>
+      <p>See what Two Soups can do for you</p>
+      <button class="main__btn"><a href="/">Take a peek</a></button>
+    </div>
+    <div class="main__img--container" id="three"><canvas id="three" style="position:fixed; top:0%; left:0%; z-index: 0; width: 100%; height:100%;"></canvas><!--<img src="images/pic1.svg" alt="pic" id="main__img">--></div>
+  </div>
+ </div>
+  
+
+ <!--Services Section-->
+ <div class="services">
+  <h1>See what's available</h1>
+  <div class="services__container">
+    <div class="services__card">
+      <h2>Pump up your project</h2>
+      <p>Dynamic systems</p>
+      <button>Get Started</button>
+    </div>
+
+    <div class="services__card">
+      <h2>Unjumble your code</h2>
+      <p>Be responsive</p>
+      <button>Get Started</button>
+    </div>
+  </div>
+ </div>
+
+ <!-- Footer -->
+
+ <div class="footer__container">
+  <div class="footer__links">
+    <div class="footer__link--wrapper">
+      <div class="footer__link--items">
+        <h2>About Two Soups Studios</h2>
+        <a href="/">How it works</a>
+        <a href="/">Testimonials</a>
+        <a href="/">Previous Partners</a>
+        <a href="/">Terms of Services</a>
+      </div>
+      <div class="footer__link--items">
+        <h2>Get in Touch</h2>
+        <a href="/">Contact</a>
+        <a href="/">Locations</a>
+
+      </div>
+ 
+
+      <div class="footer__link--items">
+        <h2>Additional Items</h2>
+        <a href="/">Videos</a>
+        <a href="/">Tutorials</a>
+        <a href="/">Previous Partners</a>
+        <a href="/">Terms of Services</a>
+      </div>
+      <div class="footer__link--items">
+        <h2>Social Media</h2>
+        <a href="/">Instagram</a>
+        <a href="/">YouTube</a>
+        <a href="/">LinkedIn</a>
+        <a href="/">Reddit</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="social__media">
+    <div class="social__media--wrap">
+      <div class="footer__logo">
+        <a href="/" id="footer__logo"><i class="fas fa-gem"></i>Soups</a></div>
+    
+    <p class="website__right">© Two Soups Studios 2023. All rights reserved</p>
+    <div class="social__icons">
+      <a href="/" class="social__icon--link" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="/" class="social__icon--link" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="/" class="social__icon--link" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="/" class="social__icon--link" target="_blank">
+        <i class="fab fa-reddit"></i>
+      </a>
+    </div>
+  </div>
+ </div>
+  
+  
+  
+  
+  <script src ="app.js"></script>
+  
+  
+  <!--<canvas id="three" style="position:fixed; top:0%; left:0%; z-index: 0; width: 100%; height:100%;"> 
+    <div class="three">meow
+      <canvas id="three"></canvas>
+    </div>
+    <p>MEOW</p>-->
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.148.0/build/three.module.js",
+          "three/": "https://unpkg.com/three@0.148.0/"
+        }
+      }
+    </script>
+    <script type="module" src="script.js"></script> 
+
+
+
+</body>
+
+</html>
