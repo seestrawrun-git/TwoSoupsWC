@@ -12,52 +12,69 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
 
   <!-- NavBar-->
- <nav class="navbar">
-  <div class="navbar__container">
-    <a href="/" id="navbar__logo">Soups</a>
-    <div class="navbar__toggle" id="mobile-menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="/" id="navbar__logo"><i class="fas fa-spoon"></i>Soups</a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="/" class="navbar__links">
+  
+            Home
+          </a>
+        </li>
+        <li class="navbar__item">
+          <a href="/games.html" class="navbar__links">
+  
+            Games
+          </a>
+        </li>
+        <li class="navbar__item">
+          <a href="/art.html" class="navbar__links">
+  
+            Art
+          </a>
+        </li>
+        <li class="navbar__items">
+          <a href="about.html" class="navbar__links">
+  
+            About
+          </a>
+        </li>
+        <li class="navbar__btn">
+          <a href="/email.html" class="button">
+  
+            Contact Me
+          </a>
+        </li>
+      </ul>
     </div>
-    <ul class="navbar__menu">
-      <li class="navbar__item">
-        <a href="/" class="navbar__links">
-
-          Home
-        </a>
-      </li>
-      <li class="navbar__item">
-        <a href="/tech.html" class="navbar__links">
-
-          Games
-        </a>
-      </li>
-      <li class="navbar__item">
-        <a href="/" class="navbar__links">
-
-          Audio
-        </a>
-      </li>
-      <li class="navbar__btn">
-        <a href="/" class="button">
-
-          Contact Me
-        </a>
-      </li>
-    </ul>
-  </div>
- </nav>
+   </nav>
   
 
  <!-- main Section-->
+ <div class="gamesHero">
+    <h1 class="open" id="Test">Quickly Prototype Game Mechanics</h1>
+    <i class="fa-solid fa-gamepad"></i>
+    
+ </div>
 <section>
 <div class="slider-container">
+    <!--
+    <button id="focusButton">FocusNext</button>
+    -->
+    
     <div class="slide">
        
         
@@ -68,9 +85,29 @@
 
     <h2><a href="/survivor.html">UE Mannequin Survivor</a></h2>
     </div>
+
+    <div class="slide">
+        <h2><a href="/subway.html">
+            Subway Omega Man
+        </a></h2>
+    </div>
+
+    <div class="slide">
+        <h2><a href="/vowel.html">Vowel Obliterator
+            
+        </a></h2>
+    </div>
+
+    <div class="slide">
+        <h2><a href="/rose.html">Titanic: Rose Catcher</a></h2>
+    </div>
 </div>
+<button id="focusButton">FocusNext</button>
+
 
 </section>>
+
+
 
  <!-- Footer -->
 
@@ -109,10 +146,12 @@
     </div>
   </div>
 
+
+
   <div class="social__media">
     <div class="social__media--wrap">
       <div class="footer__logo">
-        <a href="/" id="footer__logo"><i class="fas fa-gem"></i>Soups</a></div>
+        <a href="/" id="footer__logo"><i class="fas fa-spoon"></i>Soups</a></div>
     
     <p class="website__right">© Two Soups Studios 2023. All rights reserved</p>
     <div class="social__icons">
@@ -136,6 +175,9 @@
   
   
   <script src ="app.js"></script>
+
+
+
   
   
   <!--<canvas id="three" style="position:fixed; top:0%; left:0%; z-index: 0; width: 100%; height:100%;"> 
@@ -143,7 +185,7 @@
       <canvas id="three"></canvas>
     </div>
     <p>MEOW</p>-->
-    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+    <!--<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
     <script type="importmap">
       {
         "imports": {
@@ -151,7 +193,7 @@
           "three/": "https://unpkg.com/three@0.148.0/"
         }
       }
-    </script>
+    </script>-->
     <script type="module" src="script.js"></script> 
 
 

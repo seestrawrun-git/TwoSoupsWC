@@ -64,7 +64,7 @@ body, html{
   font-size: 2rem;
 }
 
-.fa-gem {
+.fa-spoon {
   margin-right: 0.5rem;
 }
 
@@ -622,34 +622,166 @@ body, html{
 
 /*Games Page*/
 
+.gamesHero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-self: center;
+  margin: 0 auto;
+  height: 30vh;
+  background-color: #141414;
+  z-index: 1;
+  width: 100vw;
+  border-top: solid 2px #ff8177;
+
+  padding: 0 50px;
+}
+
+.open {
+  font-size: 4rem;
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  
+  
+}
+
+.fa-gamepad {
+  font-size: 6rem;
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background-size: 100%;
+  text-align: center;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
 section {
   display: grid;
   place-items: center;
   align-content: center;
-  min-height: 100vh;
+  min-height: 80vh;
+  overflow: scroll;
+  background-color: white;
+  color: white;
 }
 
 .slider-container {
   height: 500px; 
-  width: 800px;
+  min-width: 100vw;
   display: flex;
   overflow: auto;
-  scroll-snap-type: x mandatory; 
+  scroll-behavior:smooth;
+
+  
+
 }
+
 .slider-container .slide {
-  scroll-snap-align: start;
+  position: absolute;
+  opacity: 0;
+}
+
+
+.slider-container .slide:nth-child(1) {
+  margin: 1rem;
   height: 337.5px;
   width: 600px;
-  cursor: pointer;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%),url('/images/JumpRope.gif');
+  background-size:initial;
+  position: absolute;
+  color: #fff;
+  opacity: 1;
+}
 
+.slider-container .slide:nth-child(2) {
+  margin: 1rem;
+  height: 337.5px;
+  width: 600px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%),url('/images/Survivor.gif');
+  background-size: cover;
+  position: absolute;
+  opacity: 1;
 
 }
 
-.slider-container .slide h2 {
+.slider-container .slide:nth-child(3) {
+  margin: 1rem;
+  height: 337.5px;
+  width: 600px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%),url('/images/subway.gif');
+  background-size: cover;
+  position: absolute;
+  opacity: 1;
+
+}
+
+.slider-container .slide:nth-child(4) {
+  margin: 1rem;
+  height: 337.5px;
+  width: 600px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%),url('/images/vowel.gif');
+  background-size: cover;
+  position: absolute;
+  opacity: 1;
+}
+
+.slider-container .slide:nth-child(5) {
+  margin: 1rem;
+  height: 337.5px;
+  width: 600px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%),url('/images/RoseCatcher.gif');
+  background-size: cover;
+  position: absolute;
+  opacity: 1;
+
+}
+
+
+
+@media screen and (max-width: 820px) {
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 80vh;
+  overflow: scroll;
+  background-color: white;
+  color: white;
+  opacity: 1;
+  
+  
+}
+
+.slider-container {
+  height: 500px; 
+  min-width: 3200px;
+  display: flex;
+  overflow: auto;
+  scroll-behavior:smooth;
+  opacity: 1;
+  
+
+}
+
+
+.slider-container h2 {
+  text-decoration: none;
+
   position: relative;
   top: 350px;
   left: 30px;
-  color: #141414;
 }
 
 .slider-container .slide:nth-child(1) {
@@ -658,9 +790,10 @@ section {
   width: 600px;
   border-radius: 4px;
   background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%),url('/images/JumpRope.gif');
-  background-size: cover;
+  background-size:initial;
   position: relative;
   color: #fff;
+  opacity: 1;
 }
 
 .slider-container .slide:nth-child(2) {
@@ -671,6 +804,56 @@ section {
   background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%),url('/images/Survivor.gif');
   background-size: cover;
   position: relative;
+  opacity: 1;
 
 }
 
+.slider-container .slide:nth-child(3) {
+  margin: 1rem;
+  height: 337.5px;
+  width: 600px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%),url('/images/subway.gif');
+  background-size: cover;
+  position: relative;
+  opacity: 1;
+
+}
+
+.slider-container .slide:nth-child(4) {
+  margin: 1rem;
+  height: 337.5px;
+  width: 600px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%),url('/images/vowel.gif');
+  background-size: cover;
+  position: relative;
+  opacity: 1;
+}
+
+.slider-container .slide:nth-child(5) {
+  margin: 1rem;
+  height: 337.5px;
+  width: 600px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17, 17, 17, 0.6) 100%),url('/images/RoseCatcher.gif');
+  background-size: cover;
+  position: relative;
+  opacity: 1;
+
+
+}
+}
+
+/* Email Page */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label, input, textarea {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Carousel experiment*/
