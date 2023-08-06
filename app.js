@@ -24,6 +24,25 @@ console.log("from app.js" + focusButton2);
 
 
 focusButton2.addEventListener('click', function() {
+    console.log("Current variable " + slideIndex + " actual slide number " + slideChildren[slideIndex].innerHTML);
+
+    slideChildren.forEach(function(index) {
+        index.style.opacity = 0;
+    });
+
+    slideChildren[slideIndex].style.opacity = 1;
+
+    slideIndex++;
+
+    if (slideIndex >= slideChildren.length) {
+        slideIndex = 0;
+    }
+
+    h2REF.innerHTML = slideIndex;
+});
+
+
+/*focusButton2.addEventListener('click', function() {
 
     console.log("Current variable" +slideIndex +  "actual slide number " + slideChildren[slideIndex].innerHTML)
    
@@ -42,7 +61,7 @@ focusButton2.addEventListener('click', function() {
     
     slideIndex++;
     h2REF.innerHTML = slideIndex;
-})
+})*/
 
 
 

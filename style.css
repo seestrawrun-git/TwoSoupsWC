@@ -775,6 +775,10 @@ section {
 
 }
 
+#focus-button {
+  height: 100px;
+}
+
 
 .slider-container h2 {
   text-decoration: none;
