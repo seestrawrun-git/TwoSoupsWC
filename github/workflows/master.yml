@@ -1,0 +1,21 @@
+on: 
+  push:
+    branches:
+      - main
+  
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: iad1-shared-d12-06.dreamhost.com
+        username: dh_dnzvsx
+        password: ${{ liQuidity6950! }}
+        server-dir: /public_html//twosoupsstudios.com/
