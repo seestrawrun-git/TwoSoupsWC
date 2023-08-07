@@ -778,7 +778,7 @@ section {
   background-color: #141414;
   color: white;
   opacity: 1;
-  scroll-
+  
   
   
 }
@@ -794,6 +794,7 @@ section {
 .slider-container {
   height: 500px; 
   min-width: 100vw;
+  width: 100%;
   display: flex;
   overflow: auto;
   scroll-behavior:smooth;
@@ -823,6 +824,10 @@ section {
   position: relative;
   top: 350px;
   left: 30px;
+}
+
+.slide {
+  min-width:600px;
 }
 
 .slider-container .slide:nth-child(1) {

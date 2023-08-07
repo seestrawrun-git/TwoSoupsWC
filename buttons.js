@@ -36,7 +36,7 @@ if(windowWidth > 800){
 
 
 function windowChanged() {
-    if(windowWidth < 800) {
+    if(window.innerWidth < 800) {
         console.log("yo");
         slideChildren.forEach(function(index) {
             index.style.opacity = 1;
@@ -44,7 +44,7 @@ function windowChanged() {
         });
     
     };
-    if(windowWidth > 800){
+    if(window.innerWidth > 800){
         slideChildren.forEach(function(index) {
             index.style.opacity = 0;
             slideChildren[slideIndex].style.opacity = 1;
