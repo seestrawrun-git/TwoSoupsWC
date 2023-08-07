@@ -6,6 +6,31 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 let scene, camera, renderer, clock, mixer, clips
 let cameraPosition = new THREE.Vector3(0, 0, 20)
 let model
+const loader = new THREE.TextureLoader();
+const cross = loader.load('./particleTex.png');
+
+const particlesGeometry = new THREE.BufferGeometry;
+const particlesCount = 5000;
+
+const posArray = new Float32Array(particlesCount * 3);
+
+for(let i = 0; i < particlesCount * 3; i++) {
+  //posArray[i] = Math.random()
+  //posArray[i] = Math.random() -0.5;
+  posArray[i] = (Math.random() -0.5) * 10;
+}
+
+const material = new THREE.PointsMaterial({
+  size: .25,
+  map: cross,
+  transparent: true,
+  opacity: .5,
+  blending: THREE.NormalBlending
+});
+
+particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+const particlesMesh = new THREE.Points(particlesGeometry, material);
 
 let divCanvas = document.querySelector('#three');
 
@@ -47,7 +72,7 @@ function init() {
   back.position.set(0, 1.5, -2.5)
 
   scene.add(floor, back)*/
-
+  scene.add(particlesMesh);
   //add your model
   // create a animation mixer
 
@@ -119,6 +144,15 @@ function onMouseMove(event) {
   const deltaX = event.clientX - previousMousePosition.x;
   const deltaY = event.clientY - previousMousePosition.y;
 
+
+  if(event.clientX < previousMousePosition.x) {
+    rotationSpeed *= -1;
+  }
+
+  if(event.clientX > previousMousePosition.x) {
+    rotationSpeed *= -1;
+  }
+
   rotateModel(deltaX, deltaY);
 
   previousMousePosition = {
@@ -126,6 +160,8 @@ function onMouseMove(event) {
     y: event.clientY
   };
 }
+
+
 
 function onMouseUp() {
   isDragging = false;
@@ -145,13 +181,21 @@ function onTouchMove(event) {
     const deltaY = touchY - touchStartY;
 
     // Rotate the model based on touch movement
+
+    console.log("clientX " + event.touches[0].clientX);
+    console.log("previous mouse position " + touchStartX)
+
+
+  
     model.rotation.y += deltaX * rotationSpeed;
-    model.rotation.x += 0 * rotationSpeed;
+    model.rotation.x += 0 * rotationSpeed; 
+    particlesMesh.rotation.y += deltaX * rotationSpeed*.5;
+
 
     touchStartX = touchX;
     touchStartY = touchY;
   }
-}
+} 
 
 function rotateModel(deltaX, deltaY) {
   // Adjust the rotation speed
@@ -162,10 +206,13 @@ function rotateModel(deltaX, deltaY) {
   // Rotate the model
   model.rotation.y += deltaX * rotationSpeed;
   model.rotation.x += 0 * rotationSpeed;
+  particlesMesh.rotation.y += deltaX * rotationSpeed*2;
 }
 
 function animate() {
   requestAnimationFrame(animate)
+  //model.rotation.y += rotationSpeed;
+  particlesMesh.rotation.y += rotationSpeed *.5;
 
   if (mixer) {
     mixer.update(clock.getDelta());
@@ -175,7 +222,16 @@ function animate() {
 
 
 
+const tick = () =>
+{
+  
+  console.log("hello");
+  const elapsedTime = clock.getElapsedTime()
 
+  window.requestAnimationFrame(tick);
+  
+}
 
 init()
 animate()
+tick();
