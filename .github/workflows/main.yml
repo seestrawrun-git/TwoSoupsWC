@@ -17,4 +17,4 @@ jobs:
         server: iad1-shared-d12-06.dreamhost.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: /public_html/twosoupsstudios.com/
+        server-dir: /twosoupsstudios.com/
