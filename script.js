@@ -57,12 +57,12 @@ function init() {
   // Load a glTF resource
   loader.load(
     // resource URL
-    'idle.glb',
+    'smallerTex.glb',
     // called when the resource is loaded
     function(gltf) {
       model = gltf.scene
       scene.add(model);
-      model.scale.set(2.4, 2.4, 2.4);
+     model.scale.set(2.4, 2.4, 2.4);
 
       mixer = new THREE.AnimationMixer(model);
       clips = gltf.animations; // Array<THREE.AnimationClip>
