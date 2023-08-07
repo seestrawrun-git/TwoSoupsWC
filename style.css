@@ -783,7 +783,11 @@ section {
 }
 
 .open {
-  font-size: 3rem;
+  font-size: 1rem;
+}
+
+.fa-gamepad {
+  font-size: 1rem;
 }
 
 .slider-container {
