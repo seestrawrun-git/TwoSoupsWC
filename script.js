@@ -123,7 +123,7 @@ let touchStartY = 0;
 let rotationSpeed = 0.01;
 
 let isDragging = false;
-/*
+
 document.addEventListener('mousedown', onMouseDown);
 document.addEventListener('mousemove', onMouseMove);
 document.addEventListener('mouseup', onMouseUp);
@@ -195,7 +195,7 @@ function onTouchMove(event) {
     touchStartX = touchX;
     touchStartY = touchY;
   }
-} */
+} 
 
 rotateModel();
 function rotateModel(deltaX, deltaY) {
