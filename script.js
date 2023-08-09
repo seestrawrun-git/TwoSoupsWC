@@ -109,7 +109,7 @@ function init() {
      
     camera.aspect = (window.innerWidth/ window.innerHeight)
     camera.updateProjectionMatrix()
-    renderer.setSize(divCanvas.clientWidth, divCanvas.clientHeight)
+    renderer.setSize(window.innerWidth, window.innerHeight)
   }
 }
 
