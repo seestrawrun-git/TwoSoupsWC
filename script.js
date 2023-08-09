@@ -123,7 +123,7 @@ let touchStartY = 0;
 let rotationSpeed = 0.01;
 
 let isDragging = false;
-
+/*
 document.addEventListener('mousedown', onMouseDown);
 document.addEventListener('mousemove', onMouseMove);
 document.addEventListener('mouseup', onMouseUp);
@@ -183,7 +183,7 @@ function onTouchMove(event) {
     // Rotate the model based on touch movement
 
     console.log("clientX " + event.touches[0].clientX);
-    console.log("previous mouse position " + touchStartX)
+    console.log("previoustouch position " + touchStartX)
 
 
   
@@ -195,8 +195,9 @@ function onTouchMove(event) {
     touchStartX = touchX;
     touchStartY = touchY;
   }
-} 
+} */
 
+rotateModel();
 function rotateModel(deltaX, deltaY) {
   // Adjust the rotation speed
   const rotationSpeed = 0.005;
