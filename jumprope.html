@@ -8,7 +8,7 @@
   <link href="style.css?v=2" rel="stylesheet" type="text/css" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -62,36 +62,51 @@
   
 
  <!-- main Section-->
- <div class="main">
-  <div class="main__container">
-    <div class="main__content">
-      <h1>Unreal Engine</h1>
-      <h2>Engineering</h2>
-      <p>See what Two Soups can do for you</p>
-      <button class="main__btn"><a href="/">Take a peek</a></button>
-    </div>
-    <div class="main__img--container" id="three"><canvas id="three" style="position:fixed; top:0%; left:0%; z-index: 0; width: 100%; height:100%;"></canvas><!--<img src="images/pic1.svg" alt="pic" id="main__img">--></div>
-  </div>
- </div>
-  
+ 
+<header>
+  <div id="lottie-animation"><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+
+
+    <lottie-player src="https://lottie.host/2a3c53f7-e6ef-48c9-b976-05d64267d1ae/CW2LVVVdaJ.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+  </div><h1>Extreme Jumprope</h1>
+</header>
+<main>
+  <section class="design-waypoint">
+    <h2>Design Waypoint</h2>
+    <p>A first person race to the finish where quick reflexes will shield you from an ever increasingly hostile environment. Spark adrenaline in players</p>
+  </section>
+  <section class="mechanics">
+    <h2>Mechanics and Play Design Elements</h2>
+    <p>You are thrown into a fiery pit with a dangerous jumprope sweeping along the surface armed only with a launch pad generating gun</p>
+    <!-- Your content about mechanics and play design elements goes here -->
+  </section>
+  <section class="rules">
+    <h2>Rules of Play</h2>
+    <p>Collect all of the coins scattered throughout the pit to buy your ticket to freedom.  The lava and jumprope will hurt you.  The jumprope's sweeping interval will quicken.</p>
+  </section>
+  <section class="goals">
+    <h2>Player Goals</h2>
+    <p>Successfully collect arena coins and compete for the high score in each of three difficulty settings</p>
+    <!-- Your content about the game goals goes here -->
+  </section>
+  <section class="game-objects">
+    <h2>Game Objects</h2>
+    <ul class="objects">
+      <li>Launchpad Gun</li>
+      <li>Golden Coins</li>
+      <li>Lava Danger Zone</li>
+      <li>Sweeping Rope Obstacle</li>
+    </ul>
+    <!-- Your content about the game objects goes here -->
+  </section>
+  <section class="development">
+    <h2>Development Process</h2>
+    <!-- Your content about how the game was developed goes here -->
+  </section>
+</main>
 
  <!--Services Section-->
- <div class="services">
-  <h1>See what's available</h1>
-  <div class="services__container">
-    <div class="services__card">
-      <h2>Pump up your project</h2>
-      <p>Dynamic systems</p>
-      <button>Get Started</button>
-    </div>
 
-    <div class="services__card">
-      <h2>Unjumble your code</h2>
-      <p>Be responsive</p>
-      <button>Get Started</button>
-    </div>
-  </div>
- </div>
 
  <!-- Footer -->
 
@@ -174,6 +189,8 @@
       }
     </script>
     <script type="module" src="script.js"></script> 
+  
+    
 
 
 
