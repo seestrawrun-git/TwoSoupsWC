@@ -2,8 +2,9 @@ const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar__menu');
 const focusButton2 = document.getElementById('focusButton');
 const h2REF = document.getElementById('Test')
-const slideChildren = document.querySelectorAll('.slide');
+const slideChildren = document.querySelectorAll('.games__slide');
 let slideIndex = 0;
+let previousWindowWidth;
 
 
 //window size stuff
@@ -14,22 +15,26 @@ let windowWidth = window.innerWidth;
 console.log(windowWidth);
 
 //initialize window size
-if(windowWidth < 800) {
+/*if(windowWidth < 800) {
     console.log("yo");
     slideChildren.forEach(function(index) {
         index.style.opacity = 1;
+        index.style.zIndex = 1;
     
     });
 
 };
-if(windowWidth > 800){
+if(windowWidth > 800){ */
     slideChildren.forEach(function(index) {
+        index.style.zIndex = 0;
         index.style.opacity = 0;
         slideChildren[slideIndex].style.opacity = 1;
+        slideChildren[slideIndex].style.zIndex = 1;
     
     });
+   
 
-}
+//}
 
 
 
@@ -38,20 +43,24 @@ if(windowWidth > 800){
 function windowChanged() {
     if(window.innerWidth < 800) {
         console.log("yo");
-        slideChildren.forEach(function(index) {
+    }
+       /* slideChildren.forEach(function(index) {
             index.style.opacity = 1;
+            index.style.zIndex = 1;
         
         });
     
-    };
-    if(window.innerWidth > 800){
+    };*/
+    if(window.innerWidth > 800 ** window.innerWidth != previousWindowWidth){
         slideChildren.forEach(function(index) {
             index.style.opacity = 0;
             slideChildren[slideIndex].style.opacity = 1;
+            slideChildren[slideIndex].style.zIndex = 1;
         
         });
     
 }
+previousWindowWidth = window.innerWidth;
 }
 
 
@@ -63,9 +72,10 @@ window.onresize = windowChanged;
 
 //trying to set the initial slide to full opacity
 slideChildren[0].style.opacity = 1;
+slideChildren[0].style.zIndex = 1;
 
 
-console.log("from app.js" + focusButton2);
+
 
 
 
@@ -74,9 +84,11 @@ focusButton2.addEventListener('click', function() {
 
     slideChildren.forEach(function(index) {
         index.style.opacity = 0;
+        index.style.zIndex = -1;
     });
 
     slideChildren[slideIndex].style.opacity = 1;
+    slideChildren[slideIndex].style.zIndex = 1;
 
     slideIndex++;
 
@@ -84,7 +96,6 @@ focusButton2.addEventListener('click', function() {
         slideIndex = 0;
     }
 
-    h2REF.innerHTML = slideIndex;
 });
 
 
