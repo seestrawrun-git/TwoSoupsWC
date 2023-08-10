@@ -86,15 +86,15 @@ focusButton2.addEventListener('click', function() {
         index.style.opacity = 0;
         index.style.zIndex = -1;
     });
-
-    slideChildren[slideIndex].style.opacity = 1;
-    slideChildren[slideIndex].style.zIndex = 1;
-
     slideIndex++;
-
     if (slideIndex >= slideChildren.length) {
         slideIndex = 0;
     }
+    slideChildren[slideIndex].style.opacity = 1;
+    slideChildren[slideIndex].style.zIndex = 1;
+
+    
+
 
 });
 
