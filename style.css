@@ -729,7 +729,7 @@ section {
     max-width: 100vw;
     display: flex;
     
-    scroll-behavior:smooth;
+
     opacity: 1;
         /*height: 337.5px;*/
  
@@ -957,7 +957,7 @@ section {
   align-items: space-between;
   justify-content: space-between;
   min-height: 40vh;
-  overflow: scroll;
+  overflow: hidden;
   background-color: #141414;
   color: white;
   padding: 0 2rem; /* Add some horizontal padding */
@@ -987,7 +987,10 @@ section {
 }
 
 
-
+a {
+  text-decoration: none;
+  color: white;
+}
 
 .games__slider-container .games__slide {
   position: absolute;
