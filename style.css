@@ -1457,3 +1457,31 @@ section.echoes h2{
 section.echoes a, img {
   width: 75%;
 }}
+
+/* art page */
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.image {
+  display: flex; /* Use flexbox to vertically center content */
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+
+}
